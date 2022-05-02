@@ -1,0 +1,35 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Conneau et~al.(2019)Conneau, Khandelwal, Goyal, Chaudhary, Wenzek,
+  Guzm{\'a}n, Grave, Ott, Zettlemoyer, i Stoyanov]{conneau2019unsupervised}
+Alexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume
+  Wenzek, Francisco Guzm{\'a}n, Edouard Grave, Myle Ott, Luke Zettlemoyer, i
+  Veselin Stoyanov.
+\newblock Unsupervised cross-lingual representation learning at scale.
+\newblock \emph{arXiv preprint arXiv:1911.02116}, 2019.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, i
+  Toutanova]{devlin-etal-2019-bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, i Kristina Toutanova.
+\newblock {BERT}: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock U \emph{Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, stranice 4171--4186,
+  Minneapolis, Minnesota, Lipanj 2019. Association for Computational
+  Linguistics.
+\newblock \doi{10.18653/v1/N19-1423}.
+\newblock URL \url{https://aclanthology.org/N19-1423}.
+
+\bibitem[Lauscher et~al.(2020)Lauscher, Ravishankar, Vulić, i Glavaš]{zero}
+Anne Lauscher, Vinit Ravishankar, Ivan Vulić, i Goran Glavaš.
+\newblock \emph{From Zero to Hero: On the Limitations of Zero-Shot
+  Cross-Lingual Transfer with Multilingual Transformers}, 2020.
+\newblock URL \url{https://arxiv.org/abs/2005.00633}.
+
+\end{thebibliography}

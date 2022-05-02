@@ -1,0 +1,77 @@
+\documentclass[times, utf8, seminar, english]{fer}
+%\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{longtable}
+\usepackage{pdfpages}
+\newcommand{\source}[1]{\caption*{Source: {#1}} }
+
+\begin{document}
+
+
+\title{The Limitations of Zero-Shot Cross-Lingual Transfer}
+
+
+\author{Marko Rajnović}
+\voditelj{Prof. Dr. Sc. Jan Šnajder; Domagoj Pluščec, Mag. Ing.}
+\maketitle
+
+
+\tableofcontents
+
+\chapter[Introduction]{Introduction}
+Zero-shot cross-lingual transfer is the process of pretraining a language model on multiple languages, while fine-tuning it on a single one, and evaluating it on some of the pretrained languages. The language of evaluation has to be different from the fine-tuning language. No samples of the language we are evaluating on are present in the fine-tuning dataset. Few-shot cross-lingual transfer has the same pretraining step but differs in fine-tuning. In few-shot transfer, the fine-tuned zero-shot model is additionally fine-tuned on a limited number of samples from the language will be evaluating on, although fewer than the main language we are using to fine-tune. In this seminar, we will attempt to replicate some of the results from the paper (\cite{zero}). In the paper, the researchers use 2 models, mBERT (\cite{devlin-etal-2019-bert}) and XLM-R (\cite{conneau2019unsupervised}), though we will be focusing on the latter, as it is newer and is pre-trained in such a way that it allows for better cross-linguality. The reason for this improvement is in the way that the creators of XLM-R sampled their multilingual dataset, so that the lower-resource languages are oversampled, while the higher-resource languages are undersampled.  Multiple transformer models will be fine-tuned on both zero-shot and few-shot datasets and compared, to determine zero-shot effectiveness on a low-level, and a high-level language task. The low-level language task will be NER (named entity recognition), and the high-level language task will be XNLI (cross-lingual natural language inference). Cross-linguality will be tested on both low-resource and high-resource languages to determine the extent of multilinguality provided by cross-lingual transformer models. Determining zero-shot and few-shot performance quality of language models is important because better performance on these tasks means lower costs for model fine-tuning in different languages and will allow a language product to be language-agnostic.
+
+\chapter[Reproduction report]{Reproduction report}
+\section{Implementation issues}
+Although most of the code for the reproduction of the paper was given, the reproduction task was far from simple. The main issue we faced in model reproduction were incompatibility issues caused by the lack of a requirements.txt file in the supplied code.  The paper was released 2 years before the writing of this seminar, so much has changed with the packages that were used and the code wouldn't run using the current default versions of the libraries used. This was solved mostly through trial and error until the code started functioning, as there was no other way around this problem. The second issue were VRAM limitations of the graphics card used for fine-tuning. The fix was to lower the batch size and increase the number of of gradient accumulation steps proportionally. The third issue was the sheer amount of models that had to be trained for this paper, which put large strain on storage of the server these models were trained on. The code for the XNLI task had several errors which were crashing the experiments, most likely due to unavoidable libary version differences, so some parts of it had to be rewritten to enable running the experiments. The NER code required more attention, as it was in a more unfinished state. Additional samplers had to be written, as well as config changes to facilitate proper code reproduction. This was all put together into a bash script to run a large amount of models at once. Many issues were caused by the AllenNLP library, as its' older versions have many drawbacks, such as an inability to define when validation is done, as well as difficulties with model evaluation on GPU. The config files were hard to manage, as we never encountered any in this specific format before.
+
+\section{Results}
+In total, 124 models were trained for the XNLI and NER tasks. For XNLI, 3 were fine-tuned on the large English corpus, and one was chosen to be additionaly fine-tuned in multiple different configurations for 4 different languages, totaling 60 models. A similar setup was done for the NER task.
+
+\begin{longtable}[c]{|l|l|lllll|}
+	\hline
+	\textbf{Task} &
+	\textbf{Model} &
+	\multicolumn{1}{l|}{\textbf{EN}} &
+	\multicolumn{1}{l|}{\textbf{ZH}} &
+	\multicolumn{1}{l|}{\textbf{RU}} &
+	\multicolumn{1}{l|}{\textbf{AR}} &
+	\textbf{SW} \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\textit{NER} &
+	\textit{X} &
+	\textbf{90.2} &
+	-34.11 &
+	-9.32 &
+	-41.07 &
+	-19.19 \\ \cline{1-2}
+	\textit{XNLI} &
+	\textit{X} &
+	\textbf{83.4} &
+	-10.2 &
+	-8.68 &
+	-12.65 &
+	-20.42 \\ \hline
+\end{longtable}
+
+
+
+
+
+\bibliography{literature}
+\bibliographystyle{fer}
+\end{document}
+
+
+
+
+
+
+
