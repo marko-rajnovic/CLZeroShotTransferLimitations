@@ -1,9 +1,20 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Conneau et~al.(2018)Conneau, Rinott, Lample, Williams, Bowman,
+  Schwenk, i Stoyanov]{conneau-etal-2018-xnli}
+Alexis Conneau, Ruty Rinott, Guillaume Lample, Adina Williams, Samuel Bowman,
+  Holger Schwenk, i Veselin Stoyanov.
+\newblock {XNLI}: Evaluating cross-lingual sentence representations.
+\newblock U \emph{Proceedings of the 2018 Conference on Empirical Methods in
+  Natural Language Processing}, stranice 2475--2485, Brussels, Belgium,
+  Listopad-Studeni 2018. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/D18-1269}.
+\newblock URL \url{https://aclanthology.org/D18-1269}.
 
 \bibitem[Conneau et~al.(2019)Conneau, Khandelwal, Goyal, Chaudhary, Wenzek,
   Guzm{\'a}n, Grave, Ott, Zettlemoyer, i Stoyanov]{conneau2019unsupervised}
@@ -31,5 +42,28 @@ Anne Lauscher, Vinit Ravishankar, Ivan Vulić, i Goran Glavaš.
 \newblock \emph{From Zero to Hero: On the Limitations of Zero-Shot
   Cross-Lingual Transfer with Multilingual Transformers}, 2020.
 \newblock URL \url{https://arxiv.org/abs/2005.00633}.
+
+\bibitem[Pan et~al.(2017)Pan, Zhang, May, Nothman, Knight, i
+  Ji]{pan-etal-2017-cross}
+Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, i Heng
+  Ji.
+\newblock Cross-lingual name tagging and linking for 282 languages.
+\newblock U \emph{Proceedings of the 55th Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)}, stranice 1946--1958,
+  Vancouver, Canada, Srpanj 2017. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/P17-1178}.
+\newblock URL \url{https://aclanthology.org/P17-1178}.
+
+\bibitem[Williams et~al.(2018)Williams, Nangia, i
+  Bowman]{williams-etal-2018-broad}
+Adina Williams, Nikita Nangia, i Samuel Bowman.
+\newblock A broad-coverage challenge corpus for sentence understanding through
+  inference.
+\newblock U \emph{Proceedings of the 2018 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long Papers)}, stranice 1112--1122, New Orleans,
+  Louisiana, Lipanj 2018. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/N18-1101}.
+\newblock URL \url{https://aclanthology.org/N18-1101}.
 
 \end{thebibliography}

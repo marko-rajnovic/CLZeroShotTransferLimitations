@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: seminar.aux
 The style file: fer.bst
 Database file #1: literature.bib
-You've used 3 entries,
+You've used 6 entries,
             2773 wiz_defined-function locations,
-            613 strings with 5894 characters,
-and the built_in function-call counts, 1995 in all, are:
-= -- 170
-> -- 171
-< -- 1
-+ -- 57
-- -- 54
-* -- 182
-:= -- 318
-add.period$ -- 12
-call.type$ -- 3
-change.case$ -- 26
-chr.to.int$ -- 3
-cite$ -- 6
-duplicate$ -- 73
-empty$ -- 113
-format.name$ -- 57
-if$ -- 405
+            640 strings with 7070 characters,
+and the built_in function-call counts, 4454 in all, are:
+= -- 416
+> -- 324
+< -- 4
++ -- 108
+- -- 102
+* -- 392
+:= -- 669
+add.period$ -- 30
+call.type$ -- 6
+change.case$ -- 51
+chr.to.int$ -- 6
+cite$ -- 12
+duplicate$ -- 178
+empty$ -- 278
+format.name$ -- 108
+if$ -- 951
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 25
-num.names$ -- 12
-pop$ -- 52
+missing$ -- 5
+newline$ -- 46
+num.names$ -- 24
+pop$ -- 102
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 46
 quote$ -- 0
-skip$ -- 68
+skip$ -- 159
 stack$ -- 0
-substring$ -- 46
-swap$ -- 16
-text.length$ -- 1
+substring$ -- 172
+swap$ -- 55
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 33
+type$ -- 66
 warning$ -- 0
-while$ -- 12
+while$ -- 30
 width$ -- 0
-write$ -- 50
+write$ -- 107

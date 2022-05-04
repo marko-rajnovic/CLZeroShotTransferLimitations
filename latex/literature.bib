@@ -29,3 +29,58 @@
   journal={arXiv preprint arXiv:1911.02116},
   year={2019}
 }
+
+@inproceedings{pan-etal-2017-cross,
+    title = "Cross-lingual Name Tagging and Linking for 282 Languages",
+    author = "Pan, Xiaoman  and
+      Zhang, Boliang  and
+      May, Jonathan  and
+      Nothman, Joel  and
+      Knight, Kevin  and
+      Ji, Heng",
+    booktitle = "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2017",
+    address = "Vancouver, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P17-1178",
+    doi = "10.18653/v1/P17-1178",
+    pages = "1946--1958",
+    abstract = "The ambitious goal of this work is to develop a cross-lingual name tagging and linking framework for 282 languages that exist in Wikipedia. Given a document in any of these languages, our framework is able to identify name mentions, assign a coarse-grained or fine-grained type to each mention, and link it to an English Knowledge Base (KB) if it is linkable. We achieve this goal by performing a series of new KB mining methods: generating {``}silver-standard{''} annotations by transferring annotations from English to other languages through cross-lingual links and KB properties, refining annotations through self-training and topic selection, deriving language-specific morphology features from anchor links, and mining word translation pairs from cross-lingual links. Both name tagging and linking results for 282 languages are promising on Wikipedia data and on-Wikipedia data.",
+}
+
+@inproceedings{conneau-etal-2018-xnli,
+    title = "{XNLI}: Evaluating Cross-lingual Sentence Representations",
+    author = "Conneau, Alexis  and
+      Rinott, Ruty  and
+      Lample, Guillaume  and
+      Williams, Adina  and
+      Bowman, Samuel  and
+      Schwenk, Holger  and
+      Stoyanov, Veselin",
+    booktitle = "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+    month = oct # "-" # nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D18-1269",
+    doi = "10.18653/v1/D18-1269",
+    pages = "2475--2485",
+    abstract = "State-of-the-art natural language processing systems rely on supervision in the form of annotated data to learn competent models. These models are generally trained on data in a single language (usually English), and cannot be directly used beyond that language. Since collecting data in every language is not realistic, there has been a growing interest in cross-lingual language understanding (XLU) and low-resource cross-language transfer. In this work, we construct an evaluation set for XLU by extending the development and test sets of the Multi-Genre Natural Language Inference Corpus (MultiNLI) to 14 languages, including low-resource languages such as Swahili and Urdu. We hope that our dataset, dubbed XNLI, will catalyze research in cross-lingual sentence understanding by providing an informative standard evaluation task. In addition, we provide several baselines for multilingual sentence understanding, including two based on machine translation systems, and two that use parallel data to train aligned multilingual bag-of-words and LSTM encoders. We find that XNLI represents a practical and challenging evaluation suite, and that directly translating the test data yields the best performance among available baselines.",
+}
+
+@inproceedings{williams-etal-2018-broad,
+    title = "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference",
+    author = "Williams, Adina  and
+      Nangia, Nikita  and
+      Bowman, Samuel",
+    booktitle = "Proceedings of the 2018 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)",
+    month = jun,
+    year = "2018",
+    address = "New Orleans, Louisiana",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/N18-1101",
+    doi = "10.18653/v1/N18-1101",
+    pages = "1112--1122",
+    abstract = "This paper introduces the Multi-Genre Natural Language Inference (MultiNLI) corpus, a dataset designed for use in the development and evaluation of machine learning models for sentence understanding. At 433k examples, this resource is one of the largest corpora available for natural language inference (a.k.a. recognizing textual entailment), improving upon available resources in both its coverage and difficulty. MultiNLI accomplishes this by offering data from ten distinct genres of written and spoken English, making it possible to evaluate systems on nearly the full complexity of the language, while supplying an explicit setting for evaluating cross-genre domain adaptation. In addition, an evaluation using existing machine learning models designed for the Stanford NLI corpus shows that it represents a substantially more difficult task than does that corpus, despite the two showing similar levels of inter-annotator agreement.",
+}
